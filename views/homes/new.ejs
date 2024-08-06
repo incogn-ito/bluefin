@@ -7,14 +7,12 @@
 </head>
 <body>
     <h1>Add New Homes</h1>
-    <form action="">
-        <input name="Home Nickname" placeholder="Home Nickname" type="text"><br>
-        <input name="Address" placeholder="Address" type=""><br>
-        <input name="Neighborhood" placeholder="Neighborhood" type="text"><br>
-        How many <input name="Bedrooms" placeholder="#" type="number"> Bedrooms<br>
-        How many <input name="Bathrooms" type="number"> Bathrooms<br>
-        $ <input name="List Price" placeholder="List Price" type="number"><br>
-        <br>
+    <form action="/homes" method="POST">
+        <input name="home" placeholder="Home Nickname" type="text"><br>
+        <input name="neighborhood" placeholder="Neighborhood" type="text"><br>
+        How many <input name="bedrooms" placeholder="#" type="number"> Bedrooms<br>
+        How many <input name="bathrooms" placeholder="#" type="number"> Bathrooms<br>
+        $ <input name="price" placeholder="List Price" type="number"><br>
         <button type="submit">Add</button>
     </form>
 </body>

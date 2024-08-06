@@ -6,8 +6,10 @@ const router = Router()
 // GET localhost:3000/users
 router.get('/', homesCtrl.index)
 router.get('/new', homesCtrl.new)
-
+router.get('/:homeId', homesCtrl.show)
+router.get('/:homeId/edit', homesCtrl.edit)
 router.post('/', homesCtrl.create)
-router.delete('/:toyId', homesCtrl.delete)
+router.delete('/:homeId', homesCtrl.delete)
+router.put('/:homeId', homesCtrl.update)
 
 export { router }

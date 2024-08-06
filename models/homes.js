@@ -3,12 +3,11 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema
 
 const homeSchema = new Schema({
-  name: String,
-  address: String,
+  home: String,
   neighborhood: String,
   bedrooms: Number,
   bathrooms: Number,
-  listPrice: Number,
+  price: Number,
 })
 
 const Home = mongoose.model('Home', homeSchema)

@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Document</title>
 </head>
 <body>
     <h1>Your Homes</h1>
     <a href="/homes/new">Add Homes</a>
+    <ul>
+        <% homes.forEach(home => { %>
+            <li>
+                <form class="form" method="POST" action="/homes/<%= home._id %>?_method=DELETE">
+                    <button type="submit">❌</button>
+                </form>
+                <a href="/homes/<%= home._id %>"><%= home.home %></a> - $<%= home.price %> <br>
+                Neighborhood: <%= home.neighborhood %> <br>
+                Bedrooms: <%= home.bedrooms %> <br>Bathrooms: <%= home.bathrooms %>
+            </li>
+            <% }); %>
+    </ul>
 </body>
 </html>

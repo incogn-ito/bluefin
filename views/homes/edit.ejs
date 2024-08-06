@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Homes </h1>
+    <form action="/homes/<%= home._id %>?_method=PUT" method="POST">
+        <input value="<%= home.home %>" name="home" placeholder="Nickname" type="text"><br><input value="<%= home.neighborhood %>" name="neighborhood" placeholder="Neighborhood" type="text"><br>Bedrooms: <input value="<%= home.bedrooms %>" name="bedrooms" placeholder="#" type="text"><br>Bathrooms: <input value="<%= home.bathrooms %>" name="bathrooms" placeholder="#" type="text"><br>List Price: $<input value="<%= home.price %>" name="price" type="number"><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

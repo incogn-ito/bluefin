@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here's your home!</h1>
+    <h2><span style="color:blue"><%= home.home %></span> - $<%= home.price %><br><%= home.neighborhood %><br>Bedrooms: <%= home.bedrooms %><br>Bathrooms: <%= home.bathrooms %></h2>
+    <a href="/homes/<%= home._id %>/edit"><button>Edit</button></a>
+    <a href="/homes/"><button>Back</button></a>
+</body>
+</html>
